@@ -1,0 +1,29 @@
+﻿<!--
+   Preston Loveland
+   Assignment 4
+   Section 1 Group 11
+
+    Page for home and top 5 restaurants
+-->
+@{
+    ViewData["Title"] = "Provo Restaurants";
+}
+
+@model IEnumerable<string>
+
+<div>
+    <div class="text-center">
+        <h1 class="display-4 bg-info">Welcome to the guide on Provo eating!</h1>
+        <br /><br />
+        <h4 class="text-body">Here we have a list of the creator's top 5 Provo restaurants:</h4>
+        <br />
+    </div>
+
+    <ul class="list-group">
+        @foreach (string r in Model)
+        {
+            <li class="list-group-item">@Html.Raw(r)</li>
+        }
+    </ul>
+
+</div>

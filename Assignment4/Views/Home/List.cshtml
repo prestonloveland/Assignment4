@@ -1,0 +1,38 @@
+﻿<!--
+   Preston Loveland
+   Assignment 4
+   Section 1 Group 11
+
+    Page for list of user entered restaurants
+-->
+@{
+    ViewData["Title"] = "Restaurant List";
+}
+
+@model IEnumerable<Assignment4.Models.User_Rest>
+
+<div>
+    <h2>List of Restaurants in Provo:</h2>
+    <table class="table-bordered text-center table-warning">
+        <thead>
+            <tr>
+                <th>User Name:</th>
+                <th>Restaurant Name:</th>
+                <th>Favorite Dish:</th>
+                <th>Restaurant Phone Number:</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (Assignment4.Models.User_Rest x in Model)
+            {
+                <tr>
+                    <td>@x.UserName</td>
+                    <td>@x.RestaurantName</td>
+                    <td>@x.FavoriteDish</td>
+                    <td>@x.PhoneNumber</td>
+                </tr>
+            }
+        </tbody>
+        </table>
+</div>

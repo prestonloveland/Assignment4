@@ -1,0 +1,33 @@
+﻿<!--
+   Preston Loveland
+   Assignment 4
+   Section 1 Group 11
+
+    Page for user input of a restaurant
+-->
+@{
+    ViewData["Title"] = "Restaurant Input";
+}
+@model Assignment4.Models.User_Rest
+<body class="text-center">
+    <h2 class="display-4">Restaurant Input</h2>
+    <br /><br />
+    <form asp-action="List" method="post" class="font-weight-bold">
+        <label asp-for="UserName">User Name:</label>
+        <input id="UserName" asp-for="UserName" />
+        <br />
+        <label asp-for="RestaurantName">Restaurant Name:</label>
+        <input id="RestaurantName" asp-for="RestaurantName" />
+        <br />
+        <label asp-for="FavoriteDish">Favorite Dish:</label>
+        <input id="FavoriteDish" asp-for="FavoriteDish" />
+        <br />
+        <label asp-for="PhoneNumber">Restaurant Phone Number: </label>
+        <input id="PhoneNumber" asp-for="PhoneNumber" />
+        <br /><br />
+        <!--button that calls js function-->
+        <button type="submit" class="border-dark">Submit Restaurant</button>
+        <br />
+        <div asp-validation-summary="All"></div>
+    </form>
+</body>
